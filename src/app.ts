@@ -1,12 +1,13 @@
 import Koa from "koa";
 import bodyParser from "koa-bodyparser";
+import server from "koa-static";
 import cors from "koa-cors";
 import { setupRoutes } from "./routes";
 
 function bootstrap() {
   const app = new Koa();
 
-  app.use(bodyParser()).use(cors());
+  app.use(bodyParser()).use(cors()).use(server("public"));
 
   setupRoutes(app);
 

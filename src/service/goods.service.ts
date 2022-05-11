@@ -1,4 +1,4 @@
-import { DB } from "./../utils/db";
+import { DB } from "../utils/db";
 
 export default class GoodsService {
   static findAll(params: any[]) {

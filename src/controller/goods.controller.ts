@@ -1,6 +1,6 @@
 import { RowDataPacket } from "mysql2";
 import { Result } from "../utils";
-import GoodsService from "../services/goods.service";
+import GoodsService from "../service/goods.service";
 
 export default class GoodsController {
   static async findAll(ctx: any) {
