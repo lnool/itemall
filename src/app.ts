@@ -11,9 +11,7 @@ function bootstrap() {
 
   setupRoutes(app);
 
-  app.listen(3000, () => {
-    console.log(`Server runtime successfully at http://localhost:3000`);
-  });
+  app.listen(3000, () => console.log(`Server runtime successfully at http://localhost:3000`));
 }
 
 bootstrap();
