@@ -1,6 +1,13 @@
 import { DB } from "../utils";
 
 export default class CartService {
+  static remove(params: any[]) {
+    // params = 1,2,3
+    return DB.query(`DELETE FROM cart WHERE id IN(${params})`);
+  }
+  static findAll(params: any[]) {
+    return DB.query("SELECT * FROM cart WHERE uid = ?", params);
+  }
   static update(params: Array<any>) {
     return DB.query("UPDATE cart SET ? WHERE id = ?", params);
   }
